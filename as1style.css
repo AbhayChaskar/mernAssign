@@ -15,6 +15,9 @@ body{
     color: red;
     padding-bottom: 20px;  
 }
+.span1{
+    font-size: 16px;
+}
 .nav-item{
     letter-spacing: 1px;
 }
