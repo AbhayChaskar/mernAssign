@@ -24,6 +24,15 @@ body{
 .navbar{
     padding-right: 160px;
 }
+.about{
+    font-size: 30px; padding-bottom: 20px;
+}
+.blog{
+    text-align: center; margin-bottom: 4%; margin-top: 3%;
+}
+.active h5{
+    color: green;
+}
 .img3{
     padding-top: 70px;
     padding-bottom: 30px;
@@ -34,6 +43,9 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.btn1{
+
+}
 .btn2{
     margin-left: 30%;
     margin-bottom: 5%;
@@ -42,6 +54,13 @@ footer{
     background-color:#303030;
     color: rgb(201, 201, 201);
 }
+.footerbtn{
+    padding-left: 15%;
+}
+.ultype ul{
+    list-style-type: none;
+}
+
 @media only screen and (min-width: 360px) and (max-width:375px){
     #ss i {
       position: relative;
