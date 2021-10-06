@@ -124,44 +124,51 @@
 					<li class="fileds">
 						<div class="name_fileds">
 							<label>First Name</label>
-							<input name="firstname" type="text" /> 
+							<input name="firstname" type="text" onblur="namevalidate(this)" aria-required="true"/>
+							<span id="textField">  &nbsp; </span>
 						</div>
 						<div class="name_fileds">
 							<label>Last Name</label>
-							<input name="lastname" type="text" /> 
+							<input name="lastname" type="text" onblur="lastnameval(this)" required="true"/> 
+							<span id="textField2">&nbsp;</span>
 						</div>
 					</li>
 					<li class="fileds">
 						<div class="phone_fileds">
 							<label>Phone No</label>
-							<input name="phone" type="text" /> 
+							<input name="phone" type="text" onblur="phoneval(this)" required/> 
+							<span id="textField3">&nbsp;</span>
 						</div>
 						<div class="phone_fileds">
 							<label>Office No</label>
-							<input name="office" type="text" /> 
+							<input name="office" type="text" onblur="officeval(this)" required/> 
+							<span id="textField4">&nbsp;</span>
 						</div>
 					</li>					
 					<li class="fileds">
 						<div class="email_fileds">
 							<label>Email</label>
-							<input name="email" type="text" /> 
+							<input name="email" type="text"  onblur="checkmail(this)" required/> 
+							<span id="textField5">&nbsp;</span>
 						</div>
 						<div class="pass_fileds">
 							<label>Password</label>
-							<input name="password" type="text" /> 
+							<input name="password" type="text" onblur="checkpass(this)" required/> 
+							<span id="textField6">&nbsp;</span>
 						</div>
 					</li>
 					<li class="fileds">
 						<div class="pass_fileds">
 							<label>Confirm Password</label>
-							<input name="password" type="text" /> 
+							<input name="password2" type="text" onblur="checkconpass(this)" required/> 
+							<span id="textField7">&nbsp;</span>
 						</div>
 							<div class="dob_fileds selectbox">
 								<label>My birthdate is</label>
 
 								<ul>
 									<li>
-										<select name="month" class="select month">
+										<select name="month" class="select month" required>
 											<option value="jan">Jan</option>
 											<option value="feb">Feb</option>
 											<option value="march">March</option>
@@ -215,47 +222,62 @@
 									</li>
 
 									<li>
-										<select name="year" class="select year">
-											<option value="volvo">Year</option>
+										<select name="year" class="select year" >
+											<option value="2011">2011</option>
+											<option value="2012">2012</option>
+											<option value="2013">2013</option>
+											<option value="2014">2014</option>
+											<option value="2015">2015</option>
+											<option value="2016">2016</option>
+											<option value="2015">2015</option>
+											<option value="2016">2016</option>
+											<option value="2017">2017</option>
+											<option value="2018">2018</option>
+
 										</select>
 									</li>
 								</ul>
+								<span id="textField9"></span>
 							</div>
 					</li>
 					<li class="fileds">
 						<div class="age_fileds">
 							<label>Age</label>
-							<input name="age" type="text" /> 
+							<input name="age" type="text"  disabled/> 
+							<span id="textField8"> &nbsp;</span>
 						</div>
-						<div class="gender_fileds">
+						<div class="gender_fileds" onmouseover="radio_validity()">
 							<label>Gender</label>
 							<ul>
-								<li><input type="radio" class="radio" id="residence1" name="radio" /><label class="radio-label" for="residence1">Male</label></li>
-								<li><input type="radio" class="radio" id="residence2" name="radio" /><label class="radio-label" for="residence2">Female</label></li>
-							</ul>	
+								<li><input type="radio" class="radio" id="residence1" name="radio" value="Male"/><label class="radio-label" for="residence1">Male</label></li>
+								<li><input type="radio" class="radio" id="residence2" name="radio" value="Female"/><label class="radio-label" for="residence2">Female</label></li>
+							</ul>
+							<span id="textField10"> &nbsp;</span>	
 						</div>
 					</li>
 					<li>
-						<div class="interest_fileds">
+						<div class="interest_fileds" onmouseover="checkboxvalidity()">
 						<label>Interest</label>
 							<ul>
-								<li><input type="checkbox" class="checkbox" id="checkbox_sample18" /> <label class="css-label" for="checkbox_sample18">Biking</label></li>
-								<li><input type="checkbox" class="checkbox" id="checkbox_sample19" /> <label class="css-label" for="checkbox_sample19">Reading</label></li>
-								<li><input type="checkbox" class="checkbox" id="checkbox_sample20" /> <label class="css-label" for="checkbox_sample20">Playing</label></li>
+								<li><input type="checkbox" class="checkbox" id="checkbox_sample18" value="Biking"/> <label class="css-label" for="checkbox_sample18">Biking</label></li>
+								<li><input type="checkbox" class="checkbox" id="checkbox_sample19" value="Reading"/> <label class="css-label" for="checkbox_sample19">Reading</label></li>
+								<li><input type="checkbox" class="checkbox" id="checkbox_sample20" value="Playing" /> <label class="css-label" for="checkbox_sample20">Playing</label></li>
 							</ul>
+							<span id="textField11"> &nbsp;</span>
 						</div>
 						<div class="about_you_fileds">
 						<label>About you</label>
-						<textarea></textarea>
+						<textarea onblur="validabout(this)"></textarea>
+						<span id="textField12"> &nbsp;</span>
 						</div>						
 					</li>
 				</ul>
 				<div class="next_btn_block">
-					<div class="next_btn">
-						<a href="#">Proceed to Step 2 <span><img src="images/small_triangle.png" alt="small_triangle"> </span></a>
+					<div class="next_btn" >
+						<a href="partners_preference_form.html" onclick="validate_form()">Proceed to Step 2 <span><img src="images/small_triangle.png" alt="small_triangle"> </span></a>
 					</div>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>		
   </div>
@@ -443,5 +465,272 @@ Live a life without regrets and take action today!</p>
 		});
 	});
 </script>
+
+<script type="text/javascript">
+	//form validation part
+	
+	function namevalidate(inputTxt){
+		var textField=document.getElementById("textField");
+		var expname=/^[a-zA-Z ]{3,20}$/;
+
+		if(inputTxt.value != '' ){
+        
+		if(inputTxt.value.length >= 3 && inputTxt.value.length <= 20  ){
+		
+			if(inputTxt.value.match(expname)){
+				textField.innerHTML = "&nbsp;";
+				return true;	
+			}
+			else{
+				
+				textField.textContent = 'only letters And White space';
+				textField.style.color = "red";
+				return false;
+				
+			}  
+		}else{
+			
+			textField.textContent = 'your input should between 3-20 chracters';
+			textField.style.color = "red";
+			return false
+			
+		}   
+	}else{
+		document.getElementsByName("firstname").required=true;
+		textField.textContent = 'your input is empty';
+		textField.style.color = "red";
+		return false;
+	}
+}
+	function lastnameval(inputTxt){
+	var textField2=document.getElementById("textField2");
+		var expname=/^[a-zA-Z ]{1,10}$/;
+		
+		if(inputTxt.value != '' ){
+        
+		if(inputTxt.value.length >= 1 && inputTxt.value.length <= 10  ){
+		
+			if(inputTxt.value.match(expname)){
+				textField2.innerHTML = "&nbsp;";
+				return true;	
+			}else{
+				
+				textField2.textContent = 'only letters And White space';
+				textField2.style.color = "red";
+				return false;
+				
+			}  
+		}else{
+			
+			textField2.textContent = 'your input should between 1-10 chracters';
+			textField2.style.color = "red";
+			return false;
+			
+		}   
+	}else{
+		
+		textField2.textContent = 'your input is empty';
+		textField2.style.color = "red";
+		return false;
+		
+	}
+
+}
+
+	function phoneval(inputTxt){
+
+	var textField3=document.getElementById("textField3");
+		var expname=/^[0-9]{10}$/;
+		
+		if(inputTxt.value != '' ){
+        
+			if(inputTxt.value.match(expname)){
+				textField3.innerHTML = "&nbsp;";
+				return true;
+					
+			}
+			else{
+			
+			textField3.textContent = 'must contain 10 numbericals and no alphabets allowed';
+			textField3.style.color = "red";
+			return false;
+			
+			}   
+		}
+		
+	else{
+		
+		textField3.textContent = 'enter number plz';
+		textField3.style.color = "red";
+		return false;
+		
+		}
+}
+	function officeval(inputTxt){
+
+	var textField4=document.getElementById("textField4");
+		var expname=/^[0-9]{10}$/;
+		
+		if(inputTxt.value != '' ){
+        
+			if(inputTxt.value.match(expname)){
+				textField4.innerHTML = "&nbsp;";
+				return true;
+					
+			}
+			else{
+			
+			textField4.textContent = 'must contain 10 numbericals and no alphabets allowed';
+			textField4.style.color = "red";
+			return false;
+			
+			}   
+		}
+		
+	else{
+		
+		textField4.textContent = 'enter number plz';
+		textField4.style.color = "red";
+		return false;
+		
+		}
+
+}
+
+	function checkmail(inputTxt){
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;//mysite@ourearth.com
+	var textField5=document.getElementById("textField5");
+	
+
+		if(inputTxt.value.match(mailformat))
+		{
+			textField5.innerHTML = "&nbsp;";
+			return true;
+		}
+		else
+		{
+			textField5.textContent = 'Invalid email eg(mysite@ourearth.com)';
+			textField5.style.color = "red";
+			return false;
+			
+		}
+}
+
+	function checkpass(inputTxt){
+
+	var textField6=document.getElementById("textField6");
+	var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;//To check a password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter
+	
+			
+	if(inputTxt.value.match(passw)) 
+	{ 
+		textField6.innerHTML = "&nbsp;";
+			return true;	
+	}
+	else
+	{ 
+		textField6.textContent = 'length(6-20) must contain digit,uppercase,lowercase';
+		textField6.style.color = "red";
+		return false;
+	}
+}
+	function checkconpass(inputTxt){
+		var textField7=document.getElementById("textField7");
+		var pass=document.getElementsByName("password").value;
+		
+
+	if(pass==inputTxt.value)
+	{ 
+		textField7.innerHTML = "&nbsp;";
+			return true;	
+	}
+	else
+	{ 
+		textField7.textContent = 'plz check your passward and confirm passward fields ';
+		textField7.style.color = "red";
+		return false;
+	}
+}
+
+	function validabout(inputTxt){
+	//var val=document.getElementsByTagName("textarea").value;
+	var textField12=document.getElementById("textField12");
+
+	if(inputTxt.value!=""){
+		textField12.innerHTML = "&nbsp;";
+			return true;
+	}
+	else{
+		textField12.textContent = 'Field cannot be Empty';
+		textField12.style.color = "red";
+		return false;
+	}
+}
+
+	function checkboxvalidity() {
+		var textField11=document.getElementById("textField11");
+		var inputElems = document.getElementsByTagName("input");
+      	var count = 0;
+     	for (var i=0; i<inputElems.length; i++) {
+        if (inputElems[i].type === "checkbox" && inputElems[i].checked === true) {
+          count++;
+        }
+      }
+      if(count==0){
+        
+		textField11.innerHTML = "&nbsp;";
+		textField11.innerHTML=" <br> <br>Must select atleast one ";
+		textField11.style.color="red";
+		
+        event.preventDefault();
+		return false;	
+      }
+	  else{
+			textField11.innerHTML = "&nbsp;";
+			return true;
+	  }
+};
+
+	function radio_validity(){
+	var textField10=document.getElementById("textField11");
+
+	var radios = document.getElementsByName("radio");
+
+     for (var i = 0, len = radios.length; i < len; i++) {
+          if (radios[i].checked) {
+			textField10.innerHTML = "&nbsp;";
+              return true;
+          }
+     }
+	 	textField10.innerHTML = "&nbsp;";
+		textField10.innerHTML=" <br> <br>choose any one of choices given ";
+		textField10.style.color="red";
+
+     return false;
+
+}
+
+	function calculateage(){
+		var dte=document.getElementsByClassName("dob_fileds");
+		var d=document.dte.getElementsByName("date")
+		//working on this;
+	}
+
+	function validate_form(){
+	var f1=namevalidate();
+	var f2=lastnameval();
+	var f3=phoneval();
+	var f4=officeval();
+   var  f5=validabout("");
+
+	if(f5=="true"){
+		alert("form submitted");
+	}
+	else{
+		alert("fill about field");
+	}
+}
+</script>
+<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
